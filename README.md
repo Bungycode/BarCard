@@ -73,10 +73,6 @@ Contributions by team 13 and others:
 - Malik Henry
 - Oscar Salgado
 
-## [Tests](#table-of-contents)
-
-To test the site click the following link: https://barcard-group13.herokuapp.com/
-
 ## [Questions](#table-of-contents)
 
 Please contact us using the following links:
