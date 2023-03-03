@@ -77,4 +77,4 @@ Contributions by team 13 and others:
 
 Please contact us using the following links:
 
-[GitHub](https://github.com/heatherknoyes https://github.com/heatherknoyes)
+[GitHub](https://github.com/heatherknoyes)
