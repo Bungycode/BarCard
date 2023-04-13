@@ -22,7 +22,7 @@ BarCard is a web application that allows users to view, create, and share drink 
 
 ## Project Process
 
-For this project, Project 2, group 13 made use of the full range of packages that we have developed over the last 2-3 months. The project technologies listed below enabled our group to create a Full-Stack web application that is tailored to the needs of the user.
+For this project, Project 2, group 13 made use of the full range of packages that were researched and learned over the course of time spent together as colleagues. The project technologies listed below enabled our group to create a Full-Stack web application that is tailored to the needs of the user.
 The associated technologies include, but are not limited to:
 
 - Node.js and Express.js used to create a RESTful API.
