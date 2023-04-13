@@ -57,7 +57,7 @@ In addition to UI/UX prioritization, the MVC paradigm and file structure follows
 
 ## [Installation](#table-of-contents)
 
-- To run the site, you can clone this repo down, run the command 'npm install' to install all of the necessary node pacakages, and run it locally by running the command 'npm run start'.
+- To run the site, you can clone this repo down, run the command 'npm install' to install all of the necessary node packages, and run it locally by running the command 'npm run start'.
 - In the case that does not work please refer to the Github page repo for this project: https://github.com/heatherknoyes/BarCard
 
 ## [License](#table-of-contents)
