@@ -1,37 +1,36 @@
 <div class="recipe-form container-fluid d-flex flex-column align-items-center">
-  <h1 class="new-recipe-header mb-4 mt-4">Submit New Drink Recipe Here</h1>
-  <label for="drink" class="new-recipe-drink-name mb-2 mt-4">Drink Name: </label>
-  <input id="drink" type="text" class="box-shadow" /><br />
-  <div class="mb-2 mt-4">
-  <label for="liquid" class="mixing-liquid">Mixing Liquids </label><br />
+  <h1 class="new-recipe-header mb-4 mt-5">New Drink Recipe</h1>
+  <label for="drink" class="new-recipe-drink-name mb-2 mt-4">Drink Name </label>
+  <input id="drink" type="text" class="box-shadow" />
+  <div class="mb-2 mt-5">
+  <label for="liquid" class="mixing-liquid">Mixing Liquids </label>
   </div>
-  <div class="d-flex flex-column new-recipe-liquid mb-4">
+  <div class="d-flex flex-column new-recipe-liquid box-shadow pb-4">
     {{#each liquids as |liquid|}}
-      <label for="liquid_{{liquid.id}}"><input
+      <label class="pb-4" for="liquid_{{liquid.id}}"><input
           type="checkbox"
           class="liquid-list barcard-checkbox"
           id="{{liquid.id}}"
           name="liquid_{{liquid.id}}"
           value="{{liquid.name}}"
-        /> {{liquid.name}}</label><br />
+        /> {{liquid.name}}</label>
     {{/each}}
-    <a href="/newingredient" class="liquid-link">Need another liquid?</a><br />
+    <a href="/newingredient" class="liquid-link pb-4">Need another liquid?</a>
   <label for="is_alcoholic"><input
     type="checkbox"
     id="is_alcoholic"
     class="barcard-checkbox"
     name="is_alcoholic"
     value="is_alcoholic"
-  /> Contains alcohol?</label><br/>
+  /> Contains alcohol?</label>
   </div>
   
-  {{! <button type="button" class="btn btn-primary" id="add-ingredients-button">Add Ingredients</button> }}
-  <label for="drink_instructions" class="mt-4 mb-2 recipe-instructions">Recipe Instructions: </label>
-  <textarea id="drink_instructions" class="box-shadow mb-2" rows="5" cols="50"></textarea>
+  <label for="drink_instructions" class="mt-5 mb-2 recipe-instructions">Recipe Instructions </label>
+  <textarea id="drink_instructions" class="box-shadow" rows="5" cols="50"></textarea>
   <button
     type="button"
-    class="btn btn-primary mt-4 mb-4 box-shadow"
+    class="btn btn-lg btn-primary mt-5 mb-5 box-shadow"
     id="new-recipe-button"
-  >Submit</button>
+  >Add New Recipe</button>
 </div>
 <script src="/js/drink.js"></script>

@@ -1,25 +1,30 @@
 <div
-  class="container d-flex flex-column justify-content-center vh-100 ingredient"
+  class="container d-flex flex-column justify-content-center h-75 ingredient"
 >
   <h1 class="ingredient-color-animation text-center mb-4">New Ingredient</h1>
 
   <div class="row">
     <form
-      class="ingredient-form d-flex flex-column flex-wrap align-content-center justify-content-center ingredient-form pt-4 pb-4"
+      class="ingredient-form box-shadow d-flex flex-column flex-wrap align-content-center justify-content-center ingredient-form pt-4 pb-4"
     >
-      <div class="col-xs-12 col-s-4 form-floating ingredient-input">
+      <div class="col-xs-12 col-s-4 form-floating ingredient-input d-flex align-items-center">
         <input
           id="liquid"
           type="text"
           class="form-control"
           placeholder="Liquid Name"
         />
-        <label for="liquid" class="text-black text-center">Liquid Name</label>
+        <label for="liquid" class="text-black">Liquid Name</label>
       </div>
-      
+
       <div class="col-xs-12 col-s-4 ingredient-input">
         <label for="servingSize">Serving Size: </label>
-        <select name="servingSize" id="servingSize" class="ingredient-serving-size" placeholder="oz">
+        <select
+          name="servingSize"
+          id="servingSize"
+          class="ingredient-serving-size"
+          placeholder="oz"
+        >
           <option value="1">1 oz</option>
           <option value="2">2 oz</option>
           <option value="4">4 oz</option>
@@ -38,12 +43,12 @@
         />
       </div>
 
-      <div class="d-flex justify-content-start flex-column align-items-center col-xs-12">
+      <div class="d-flex flex-column col-xs-12">
         <button
           type="button"
-          class="btn btn-primary"
+          class="btn btn-primary box-shadow"
           id="new-ingredient-button"
-        >Submit</button>
+        >Add New Ingredient</button>
       </div>
     </form>
   </div>
