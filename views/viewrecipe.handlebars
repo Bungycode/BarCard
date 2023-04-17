@@ -1,5 +1,6 @@
-<div class="row m-3">
-  <div class="card box-shadow">
+<div class="page-wrapper px-5 my-5">
+<div class="row">
+  <div class="card box-shadow mb-5">
     <div class="card-header drink {{#if drink.is_alcoholic}}custom-bg-red text-white{{else}}bg-success text-white{{/if}}">{{drink.drink_name}} {{#if drink.is_alcoholic}}CONTAINS ALCOHOL{{/if}}</div>
     <div class="card-body text-black">
       Ingredients: <br>
@@ -17,10 +18,10 @@
   </div>
 </div>
 
-<div class="row m-3">
+<div>
   <form id="review-form">
-    <label for="create-post-content" class="form-label">Leave a review!</label>
-    <div class="star-container mb-4">
+    <label for="create-post-content" class="form-label block-element text-center">Leave a review!</label>
+    <div class="star-container mb-4 text-center">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <span id="1" data-name="1" class="fa fa-star"></span>
       <span id="2" data-name="2" class="fa fa-star"></span>
@@ -28,15 +29,15 @@
       <span id="4" data-name="4" class="fa fa-star"></span>
       <span id="5" data-name="5" class="fa fa-star"></span>
     </div>
-    <div class="form-floating box-shadow mb-2">
-      <textarea class="form-control" id="review-text-area" style="height: 100px"></textarea>
+    <div class="row mb-2">
+      <textarea class="form-control box-shadow textarea" id="review-text-area" style="height: 100px"></textarea>
     </div>
-    <button class="mt-2 mt-3 box-shadow btn btn-primary" id="review-submit-button" data-drink-id={{drink.id}}>Post Review</button>
+    <button class="mt-4 mb-5 box-shadow btn btn-primary block-element m-auto" id="review-submit-button" data-drink-id={{drink.id}}>Post Review</button>
   </form>
 </div>
 
 {{#each drink.reviews as |review|}}
-  <div class="row m-3 box-shadow">
+  <div class="row mt-5 box-shadow">
     <div class="card">
       <div class="card-body text-black">
         <p class="card-text">{{review.comment}}</p>
@@ -52,5 +53,6 @@
     </div>
   </div>
 {{/each}}
+</div>
 
 <script src="/js/recipe.js"></script>

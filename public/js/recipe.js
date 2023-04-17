@@ -1,12 +1,12 @@
 let starRating = 0;
-$(".fa").on("click", function () {
+$(".fa-star").on("click", function () {
   var newstarRating = $(this).attr("id");
   starRating = newstarRating;
   $(this).addClass("checked");
   var array = [];
   $(this)
     .siblings()
-    .each(function (id, el) {
+    .each(function (idx, el) {
       array.push(el.id);
       // console.log(newstarRating);
 
@@ -19,6 +19,40 @@ $(".fa").on("click", function () {
     });
 
   return starRating;
+});
+
+let favoritedRecipe = [];
+// const localFavoritedRecipes =
+//   localStorage.getItem("myFavoritedRecipes"
+// );
+// console.log(localFavoritedRecipes);
+// if (localFavoritedRecipes) {
+//   favoritedRecipe.push(JSON.parse(localFavoritedRecipes))
+//   console.log(favoritedRecipe);
+//   $(favoritedRecipe).each(function (idx, el) {
+//     console.log(el);
+//     console.log(this)
+//     $(this).addClass("favorited");
+//     console.log($(el).addClass("favorited"));
+//   });
+// }
+$(".favorite-button").on("click", function () {
+  console.log(this);
+  const isFavorited = $(this).hasClass("favorited");
+  if (!isFavorited) {
+    console.log(this);
+    $(this).removeClass("unfavorited").addClass("favorited");
+    console.log("is currently favorited");
+    favoritedRecipe.push(this);
+    console.log(favoritedRecipe);
+    return localStorage.setItem("myFavoritedRecipes", favoritedRecipe);
+  } else {
+    $(this).removeClass("favorited").addClass("unfavorited");
+    console.log("not currently favorited");
+    favoritedRecipe.splice(this, 1);
+    console.log(favoritedRecipe);
+    return localStorage.setItem("myFavoritedRecipes", favoritedRecipe);
+  }
 });
 
 const openRecipeHandler = async (event) => {
@@ -52,10 +86,22 @@ const submitReviewHandler = async (event) => {
   }
 };
 
+const removeFavoritedRecipe = async (e) => {
+  console.log(e.target.value)
+}
+
+document.querySelectorAll(".favorited").forEach((favoriteDrink) => {
+  favoriteDrink.addEventListener("click", () => {
+    console.log("Hello world!");
+  });
+});
+
 document.querySelectorAll(".drink").forEach((item) => {
   item.addEventListener("click", openRecipeHandler);
 });
 
-document
-  .querySelector("#review-submit-button")
-  .addEventListener("click", submitReviewHandler);
+const postReview = document.querySelector("#review-submit-button");
+
+if (postReview) {
+  postReview.addEventListener("click", submitReviewHandler);
+}

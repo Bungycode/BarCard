@@ -64,6 +64,7 @@ const updateRecipeHandler = async (event) => {
   const drink_name = document.querySelector("#drink").value.trim();
   const instructions = document.querySelector("#drink_instructions").value;
   const liquid_ids = getLiquidIds();
+  // Figure out how to use this to have drinks loading on the page as favorited if they have been marked a favorite?
   const is_alcoholic = $("#is_alcoholic").is(":checked") ? "true" : "false";
   const url = "/api/drinks/" + $(this).attr("data-drink-id");
 

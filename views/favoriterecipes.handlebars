@@ -1,0 +1,28 @@
+<div class="container page-wrapper">
+  {{!-- <label for="text" class="text-white">Search:</label>
+  <input type="text" id="text" class="text">
+  <button class="search">Search Recipe</button> --}}
+  <h3 class="text-white text-center m-3">Favorite Recipes</h3>
+  {{#each favoriteRecipes as |favoriteDrink|}}
+  {{#if favoriteDrink.is_favorite}}
+  <div class="row m-4 box-shadow new-recipe-cards-container">
+    <div class="card">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <span class="favorite-button favorited fa fa-heart" style="font-size:24px;"></span>
+      <div class="card-header mt-2 {{#if favoriteDrink.is_alcoholic}}custom-bg-red text-white{{else}}bg-success text-white{{/if}}" ><p class="recipe-name">
+      {{favoriteDrink.drink_name}} {{#if favoriteDrink.is_alcoholic}}CONTAINS ALCOHOL{{/if}} -  {{lookup ../emoticons @index}}</p></div>
+      <div class="card-body text-black">
+        {{favoriteDrink.instructions}}
+      </div>
+      <div class="d-flex justify-content-center mb-3">
+      <button id="drink_{{favoriteDrink.id}}" class="drink view-button" data-drink-id="{{favoriteDrink.id}}">View Recipe</button>
+      </div>
+      <div class="card-footer text-muted mb-2">
+        Posted by {{user.username}} on {{format_date createdAt}}
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{/each}}
+
+  <script src="/js/recipe.js"></script>

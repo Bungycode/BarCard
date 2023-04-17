@@ -23,6 +23,10 @@ Drink.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
+    is_favorite: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

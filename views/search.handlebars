@@ -1,12 +1,14 @@
-<div class="container barCard-body-box vh-100">
+<div class="container page-wrapper">
   {{!-- <label for="text" class="text-white">Search:</label>
   <input type="text" id="text" class="text">
   <button class="search">Search Recipe</button> --}}
   <h3 class="text-white text-center m-3">Recipe Library</h3>
   {{#each recipes as |drink|}}
   <div class="row m-4 box-shadow new-recipe-cards-container">
-    <div class="card">
-      <a href="/recipe/{{drink.id}}" class="card-header mt-2 {{#if drink.is_alcoholic}}custom-bg-red text-white{{else}}bg-success text-white{{/if}}">{{drink.drink_name}} {{#if drink.is_alcoholic}}CONTAINS ALCOHOL{{/if}} -  {{lookup ../emoticons @index}}</a>
+    <div class="card card-container">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <span class="favorite-button unfavorited fa fa-heart" style="font-size:24px;"></span>
+      <div class="card-header mt-2 {{#if drink.is_alcoholic}}custom-bg-red text-white{{else}}bg-success text-white{{/if}}"> <p class="recipe-name">{{drink.drink_name}} {{#if drink.is_alcoholic}}CONTAINS ALCOHOL{{/if}} -  {{lookup ../emoticons @index}}</p></div>
       <div class="card-body text-black">
         {{drink.instructions}}
       </div>

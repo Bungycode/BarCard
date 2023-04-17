@@ -142,6 +142,37 @@ router.get("/search", withAuth, async (req, res) => {
   }
 });
 
+// Left off here at 3:52 AM 4/15/2023. Have to get the drinks to populate to the favorite recipes page and refresh self how this back-end part works again. After this you will be trying to render only the drinks with the "favorited" class on them.
+router.get("/favoriterecipes", withAuth, async (req, res) => {
+  try {
+    const favoriteRecipeData = await Drink.findAll({
+      include: [{ model: User, attributes: ["username"] }],
+    });
+
+    const favoriteRecipes = favoriteRecipeData.map((drink) =>
+      drink.get({ plain: true })
+    );
+    const emoticons = favoriteRecipes.map(() => emoticon());
+
+    console.log("success 1");
+    // console.log(
+    //   await Drink.findAll({
+    //     include: [{ model: User, attributes: ["username"] }],
+    //   })
+    // );
+    // console.log(favoriteRecipeData.map((drink) => { if (drink === favoriteRecipeData[1]) {return console.log(drink) } else { console.log(drink, 'does not equal martini')}}))
+    // console.log(favoriteRecipeData[0].dataValues.is_favorite)
+    res.render("favoriterecipes", {
+      favoriteRecipes,
+      logged_in: req.session.logged_in,
+      emoticons,
+    });
+    // console.log("success 2");
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 router.get("/login", (req, res) => {
   try {
     res.render("login");

@@ -91,17 +91,38 @@ body {
   font-family: sans-serif, serif;
 }
 
+.page-wrapper {
+  max-width: 800px;
+  margin: auto;
+  min-width: 275;
+}
+
+.block-element {
+  display: block
+}
+
+.text-center {
+  text-align: center;
+}
+
 h1 {
   line-height: 1.5;
 }
 
-textarea {
+.textarea {
+  max-width: 400px;
+  margin: auto;
   resize: none;
 }
 
 .box-shadow {
   box-shadow: 1px 1px 15px var(--bs-info), 1px 1px 40px var(--bs-info);
   animation: anime 1s linear infinite;
+}
+
+.recipe-name {
+  width: 90%;
+  margin: 0;
 }
 
 @keyframes gradient {
@@ -144,7 +165,7 @@ textarea {
   background-position: center;
   background-size: cover;
   position: absolute;
-  bottom: 25%;
+  bottom: 15%;
 }
 
 .frontpage-features > p {
@@ -153,10 +174,6 @@ textarea {
 }
 
 /* New Ingredient Page */
-.ingredient {
-  max-width: 500px;
-  min-width: 350px;
-}
 
 .ingredient-color-animation {
   font-size: 2.2rem;
@@ -172,6 +189,8 @@ textarea {
   background-color: #a2a2a1ff;
   border-radius: 10px;
   font-size: 18px;
+  max-width: 400px;
+  margin: auto;
 }
 
 .ingredient-input {
@@ -214,9 +233,8 @@ textarea {
 }
 
 .new-recipe-liquid {
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 90px;
+  width: 100%;
+  max-width: 400px;
   background-color: #a2a2a1ff;
   border-radius: 10px;
   font-size: 1.125rem;
@@ -234,15 +252,7 @@ textarea {
   -webkit-background-clip: text;
 }
 
-.recipe-form > textarea {
-  max-width: 300px;
-}
-
 /* All Recipes */
-.new-recipe-cards-container {
-  max-height: 100vh;
-  min-height: 20vh;
-}
 
 .new-recipe-cards-container a {
   text-decoration: none;
@@ -250,6 +260,24 @@ textarea {
 
 .custom-bg-red {
   background-color: #d32f2f;
+}
+
+/* Favorite Recipes */
+
+.favorite-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.unfavorited {
+  color:black;
+}
+
+.favorited {
+  color: pink;
 }
 
 /* Reviews */

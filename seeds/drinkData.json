@@ -1,30 +1,36 @@
 [
   {
+    "is_favorite": true,
     "drink_name": "Tropicalia",
     "instructions": "Shake it",
     "is_alcoholic": true
   },
   {
+    "is_favorite": true,
     "drink_name": "Martini",
     "instructions": "Mix it",
     "is_alcoholic": true
   },
   {
+    "is_favorite": false,
     "drink_name": "Orange Juice",
     "instructions": "Stir it",
     "is_alcoholic": false
   },
   {
+    "is_favorite": false,
     "drink_name": "Coca-Cola",
     "instructions": "Stir it",
     "is_alcoholic": false
   },
   {
+    "is_favorite": false,
     "drink_name": "Ginger Ale",
     "instructions": "Stir it",
     "is_alcoholic": false
   },
   {
+    "is_favorite": false,
     "drink_name": "Virgin Strawberry Daquiri",
     "instructions": "Blend it",
     "is_alcoholic": false
