@@ -6,9 +6,10 @@ const newRecipeHandler = async (event) => {
   const instructions = document.querySelector("#drink_instructions").value;
   const liquid_ids = getLiquidIds();
   const is_alcoholic = $("#is_alcoholic").is(":checked") ? "true" : "false";
-
+console.log("right here")
   if (drink_name && liquid_ids && instructions) {
     // Send a POST request to the API endpoint
+    console.log("before post request")
     const response = await fetch("/api/drinks/", {
       method: "POST",
       body: JSON.stringify({
@@ -19,7 +20,7 @@ const newRecipeHandler = async (event) => {
       }),
       headers: { "Content-Type": "application/json" },
     });
-
+    console.log(response)
     if (response.ok) {
       // If successful, redirect the browser to the account page
       document.location.replace("/search");
